@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+img {
+  display: block;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  font-size: 13px;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    'pic pic feed'
+    'headline p feed'
+    'news news news';
+  grid-gap: 32px;
+}
+
+.pic {
+  grid-area: pic;
+}
+
+.feed {
+  grid-area: feed;
+}
+
+.headline {
+  grid-area: headline;
+  max-width: 250px;
+  font-weight: 800;
+  font-size: 46px;
+}
+
+.p {
+  grid-area: p;
+}
+.news {
+  grid-area: news;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 32px;
+}
+
+.pic img {
+  width: 100%;
+}
+.headline h1 {
+  font-size: 50px;
+}
+p {
+  margin-bottom: 40px;
+}
+button {
+  width: 150px;
+  height: 38px;
+  border: none;
+  color: white;
+  background-color: hsl(5, 85%, 63%);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-size: 12px;
+}
+.feed {
+  background-color: black;
+  height: max-content;
+}
+.feed h1 {
+  margin: 25px 20px 0px 20px;
+  color: hsl(35, 77%, 62%);
+}
+.feed h3 {
+  margin-bottom: 10px;
+  color: aliceblue;
+}
+.new:not(:last-child) {
+  border-bottom: 1px hsl(233, 8%, 79%) solid;
+}
+
+.new {
+  margin: 30px 20px 20px 20px;
+}
+
+p.inner {
+  font-size: 14px;
+  color: hsl(233, 8%, 79%);
+}
+
+.num {
+  display: flex;
+  gap: 16px;
+}
+
+.num img {
+  width: 100px;
+}
+.description > *:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.description h2 {
+  color: hsl(233, 8%, 79%);
+}
+.description p,
+.y {
+  color: hsl(236, 13%, 42%);
+}
